@@ -1,5 +1,10 @@
-DateTime==4.2
+geopy==1.11.0
 glob2==0.5
+numpy==1.13.1
+pandas==0.20.3
+python-dateutil==2.6.1
 pytz==2017.2
+six==1.10.0
 zope.interface==4.4.2
+
 
