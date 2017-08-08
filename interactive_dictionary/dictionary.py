@@ -21,4 +21,10 @@ def meaning(word):
                 return ("Please enter the valid response.")
 
 word = input("Enter a word: ")
-print (meaning(word))
+output = meaning(word)
+
+if type(output) == list:
+    for item in output:
+        print (item)
+else:
+    print (output)
