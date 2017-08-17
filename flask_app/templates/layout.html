@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Flask App</title>
+    <link rel="stylesheet" href='{{url_for('static', filename='css/main.css')}}'
 </head>
 <body>
     <header>
-        <div>
-            <h1>Manika Web App</h1>
+        <div class="container">
+            <h1 class="logo">Manika's Web App</h1>
             <strong>
                 <nav>
-                    <ul>
+                    <ul class="menu">
                         <li><a href = "{{url_for ('home')}}">Home</a></li>
                         <li><a href="{{url_for ('about')}}">About</a></li>
                     </ul>
@@ -17,7 +18,7 @@
             </strong>
         </div>
     </header>
-    <div>
+    <div class="container">
         {%block content%}
         {%endblock%}
     </div>
