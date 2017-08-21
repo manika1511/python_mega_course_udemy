@@ -7,9 +7,13 @@ def km_to_miles():
     t1.insert(END, miles)
 
 b1=Button(window, text="Convert", command=km_to_miles)
-b1.grid(row=0, column=0)
+b1.grid(row=0, column=3)
 
 input_val=StringVar()
+
+l1=Label(window, text="Kilometers")
+l1.grid(row=0, column=0)
+
 e1=Entry(window, textvariable=input_val)
 e1.grid(row=0, column=1)
 
