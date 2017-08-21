@@ -48,3 +48,4 @@ def update(qty,price,item):
     conn.commit()
     conn.close()
 
+
