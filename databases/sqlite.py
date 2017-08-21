@@ -19,7 +19,7 @@ def create_table():
 def insert(item, qty, price):
     conn = sqlite3.connect("lite.db")
     cur = conn.cursor()
-    cur.execute("INSERT INTO store VALUES(?,?,? )",(item, qty, price))
+    cur.execute("INSERT INTO store VALUES(?,?,? )",(item, qty, price)) #use this format to prevent SQL Injection
     conn.commit()
     conn.close()
 
@@ -31,5 +31,6 @@ def view():
     rows=cur.fetchall()
     conn.close()
     return rows
+
 
 
