@@ -9,7 +9,7 @@ conn=sqlite3.connect("lite.db")  #if this file exists, then the connection is ma
 cur=conn.cursor()
 
 #Step3: SQL Query
-cur.execute("CREATE TABLE store (item TEXT, qty INTEGER, price FLOAT)")
+cur.execute("CREATE TABLE IF NOT EXISTS store (item TEXT, qty INTEGER, price FLOAT)")
 
 #Step4: Commit changes to the database
 conn.commit()
