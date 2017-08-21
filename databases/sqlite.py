@@ -39,3 +39,12 @@ def delete(item):
     cur.execute("DELETE FROM store WHERE item=?", (item,))
     conn.commit()
     conn.close()
+
+#function to update an entry in the table
+def update(qty,price,item):
+    conn = sqlite3.connect("lite.db")
+    cur = conn.cursor()
+    cur.execute("UPDATE store SET qty=?, price=? WHERE item=?", (qty,price,item))
+    conn.commit()
+    conn.close()
+
