@@ -32,5 +32,10 @@ def view():
     conn.close()
     return rows
 
-
-
+#function to delete an entry in the table
+def delete(item):
+    conn = sqlite3.connect("lite.db")
+    cur = conn.cursor()
+    cur.execute("DELETE FROM store WHERE item=?", (item,))
+    conn.commit()
+    conn.close()
